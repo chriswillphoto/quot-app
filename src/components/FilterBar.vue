@@ -7,6 +7,10 @@
     <button type="button" value="life" @click="selectFilter">Understand Life</button>
     <button type="button" value="writing" @click="selectFilter">Write</button>
     <button type="button" value="creative" @click="selectFilter">Be Creative</button>
+
+    <button type="button" value="" id="random" @click="selectFilter">Read a Random Quote</button>
+
+    <router-link :to="{ name: 'AllQuotes', params: {} }">View all the quotes</router-link>
   </div>
 </template>
 
@@ -46,8 +50,19 @@ export default {
     cursor: pointer;
   }
 
+  a {
+    color: white;
+    position: absolute;
+    right: 20px;
+    text-decoration: none;
+  }
+
   .selected {
     color: skyblue;
+  }
+
+  #random {
+    // margin-left: 200px;
   }
 }
 </style>
