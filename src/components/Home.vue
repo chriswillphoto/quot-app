@@ -2,6 +2,9 @@
   <div id="home">
     <FilterBar @selectFilter="selectFilter"/>
     <Viewer :quote="selected" v-if='selected' @reload='reload' :viewKey="viewerKey"/>
+    <!-- <div v-if='filtered.length == 0' class="loading">
+      <h2>Loading</h2>
+    </div> -->
     <footer>
       <p>Created by <a href="http://thechriswill.com" target="_blank">Chris Will</a></p>
     </footer>
@@ -44,7 +47,7 @@ export default {
     },
   },
   created() {
-    axios.get('http://quot-api.herokuapp.com/quotes').then((res) => {
+    axios.get('https://quot-api.herokuapp.com/quotes').then((res) => {
       this.quotes = res.data;
       this.filtered = res.data;
     });
@@ -81,6 +84,11 @@ footer {
     color: white;
     text-decoration: none;
   }
+}
+
+.loading {
+  height: calc(100vh - 68px);
+  line-height: 100vh;
 }
 
 </style>
