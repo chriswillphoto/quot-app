@@ -2,6 +2,13 @@
 
 > A Vue.js project
 
+Need an increase in perspective to help you understand something? Throw a random quote at it. Pick a feeling and be shown a random related quote, or peruse the entire database; find a quote based on a keyword or author name.
+
+Named after the html entity for quotation marks
+
+## Live Site
+Quot can be viewed [here](https://chriswillphoto.github.io/quot-app/#/)
+
 ## Build Setup
 
 ``` bash
