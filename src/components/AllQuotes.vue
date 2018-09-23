@@ -39,7 +39,7 @@ export default {
     },
   },
   created() {
-    axios.get('https://quot-api.herokuapp.com/quotes').then((res) => {
+    axios.get('https://quot-6c8f4.firebaseio.com/').then((res) => {
       this.quotes = res.data;
       this.filtered = res.data;
     });
